@@ -21,5 +21,13 @@
     <ClCompile Include="3a.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="pb1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pb1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

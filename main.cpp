@@ -5,51 +5,16 @@ b. Gegeben sei ein Vektor von Zahlen, finden Sie die längste ansteigende
 zusammenhängende Teilfolge.
 */
 
+
+// a main-ben csak egy fuggvenyem kell legyen, a main -> ez az amit meg fog kapni a "rendelo", ez az interface. 
+#include "pb1.h"
 #include <iostream>
 #include <cmath>
 #include <cassert>
 #include <vector>
 using namespace std;
 
-bool primzahl(int n)
-{
-	//diese Funktion uberpruft ob ein Zahl Prim ist oder nicht.
-	if (n <= 1) return false;
-	if (n == 2) return true;
-	if (n % 2 == 0) return false;
-	else
-	{
-		for (int i = 3; i <= sqrt(n); i++)
-		{
-			if (n % i == 0) return false;
-		}
-	}
-	return true;
-}
 
-int langste_ansteigende_teilfolge(vector<int> v)
-{
-	int size = v.size();
-	int max = 1;
-	int max2 = 1;
-	for (int i = 0; i < (size-1); i++)
-	{
-		if (v[i] < v[i + 1]) {
-			max2++;
-			//I have printed this on the monitor to verify if the program runs correctly
-			//cout << "max2 = " << max2<<endl;
-		}
-		else
-		{
-			if (max2 > max) max = max2;
-			max2 = 1;
-			//I have printed this on the monitor to verify if the program runs correctly
-			//cout << "max = " << max << endl;
-		}
-	}
-	if (max < max2) max = max2;
-	return max;
-}
 
 int main()
 {
@@ -72,8 +37,8 @@ int main()
 
 
 	// b)
-	vector<int> v; // { 2, 5, 7, 9, 2, 13, 15, 4, 1, 2, 3, 4, 5, 6, 7, 8 };
-	//cout << langste_ansteigende_teilfolge(v);
+	vector<int> v { 2, 5, 7, 9, 2, 13, 15, 4, 1, 2, 3, 4, 5, 6, 7, 8 };
+	cout << langste_ansteigende_teilfolge(v);
 	assert(langste_ansteigende_teilfolge({ 2, 5, 7, 9, 2, 13, 15, 4, 1, 2, 3, 4, 5, 6, 7, 8 }) == 8);
 	assert(langste_ansteigende_teilfolge({ 1, 0, -2, 7, 1 }) == 2);
 	return 0;
