@@ -140,6 +140,10 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="3a.cpp" />
+    <ClCompile Include="pb2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pb2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

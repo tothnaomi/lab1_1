@@ -9,6 +9,7 @@ zusammenhängende Teilfolge.
 #include <cmath>
 #include <cassert>
 #include <vector>
+#include "pb2.h"
 using namespace std;
 
 bool primzahl(int n)
@@ -76,5 +77,33 @@ int main()
 	//cout << langste_ansteigende_teilfolge(v);
 	assert(langste_ansteigende_teilfolge({ 2, 5, 7, 9, 2, 13, 15, 4, 1, 2, 3, 4, 5, 6, 7, 8 }) == 8);
 	assert(langste_ansteigende_teilfolge({ 1, 0, -2, 7, 1 }) == 2);
+
+	//2b
+	int arr[] = { 1, 2, 4, 5, 0, 3, 5, 7, 0, 10 };
+	int nr;
+	std::cout << longestSequence(arr, sizeof(arr) / sizeof(arr[0])) << std::endl;
+	return 0;
+
+	assert(isPrime(5) == 1);
+	assert(isPrime(-5) == 0);
+	assert(isPrime(25) == 0);
+	assert(isPrime(73) == 1);
+	assert(isPrime(0) == 0);
+	//assert(("length of a sequence can't be negative", longestSequence((currentSeq) >= 0)));
+	assert(isPrime(1) == 0);
+
+	//2a
+
+
+	std::cout << "nr=";
+	std::cin >> nr;
+
+	std::cout << first_n_prime_numbers(nr);
+
+	//assert(count) >= 0);
+	//assert(first_n_prime_numbers((n)>= 0));
+	//assert(i != 1);
+	//assert(i != 0);
+
 	return 0;
 }
